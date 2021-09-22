@@ -20,15 +20,15 @@ public class Vdtuan3 implements Runnable {
     }
 
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(5);
+        ExecutorService ex = Executors.newFixedThreadPool(5);
 
         for (int i = 0; i < 10; i++) {
             Runnable w = new Vdtuan3(" " + i);
-            executor.execute(w);
+            ex.execute(w);
         }
-        executor.shutdown();
+        ex.shutdown();
 
-        while (!executor.isTerminated()) {
+        while (!ex.isTerminated()) {
 
             System.out.println("Finish All Threads");
         }
