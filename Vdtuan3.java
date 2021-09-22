@@ -24,7 +24,7 @@ public class Vdtuan3 implements Runnable {
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
         for (int i = 0; i < 10; i++) {
-            Runnable w = new Vdtuan3(s)
+            Runnable w = new Vdtuan3(s);
         }
     }
 }
