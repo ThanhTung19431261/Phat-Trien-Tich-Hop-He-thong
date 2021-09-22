@@ -14,7 +14,6 @@ public class Vdtuan3 implements Runnable {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            // TODO: handle exception
             e.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName() + " END");
@@ -24,7 +23,14 @@ public class Vdtuan3 implements Runnable {
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
         for (int i = 0; i < 10; i++) {
-            Runnable w = new Vdtuan3(s);
+            Runnable w = new Vdtuan3(" " + i);
+            executor.execute(w);
+        }
+        executor.shutdown();
+
+        while (!executor.isTerminated()) {
+
+            System.out.println("Finish All Threads");
         }
     }
 }
