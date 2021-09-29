@@ -16,14 +16,13 @@ public class TCPEchoServer {
             while (true) {
                 try {
                     Socket s = ss.accept();
-                    InputStream is = s.getInputStream();
                     OutputStream os = s.getOutputStream();
+                    InputStream is = s.getInputStream();
                     int ch = 0;
                     while (true) {
                         ch = is.read();
-                        if (ch == -1) {
+                        if (ch == -1)
                             break;
-                        }
                         System.out.println((char) ch);
                         os.write(ch);
                     }
