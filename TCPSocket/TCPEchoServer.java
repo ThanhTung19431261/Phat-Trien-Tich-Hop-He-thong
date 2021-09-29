@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPEchoServer {
-    public final static int svPort = 12;
+    public final static int svPort = 7;
 
     public static void main(String[] args) {
         try {
@@ -24,17 +24,17 @@ public class TCPEchoServer {
                         if (ch == -1) {
                             break;
                         }
-                        System.out.println(char(ch));
+                        System.out.println((char) ch);
                         os.write(ch);
                     }
                     s.close();
                 } catch (IOException ie1) {
-                    //TODO: handle exception
+                    // TODO: handle exception
                     System.out.println("Lỗi kết nối: " + ie1);
                 }
             }
         } catch (IOException ie) {
-            //TODO: handle exception
+            // TODO: handle exception
             System.out.println("Không thể tạo server: " + ie);
         }
     }
