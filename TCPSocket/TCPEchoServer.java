@@ -19,7 +19,7 @@ public class TCPEchoServer {
                     InputStream is = s.getInputStream();
                     OutputStream os = s.getOutputStream();
                     int ch = 0;
-                    while (true {
+                    while (true) {
                         ch = is.read();
                         if (ch == -1) {
                             break;
