@@ -29,12 +29,10 @@ public class TCPEchoServer {
                     }
                     s.close();
                 } catch (IOException ie1) {
-                    // TODO: handle exception
                     System.out.println("Lỗi kết nối: " + ie1);
                 }
             }
         } catch (IOException ie) {
-            // TODO: handle exception
             System.out.println("Không thể tạo server: " + ie);
         }
     }

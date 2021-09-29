@@ -23,7 +23,6 @@ public class TCPEchoClient {
                 Thread.sleep(2000);
             }
         } catch (IOException ie) {
-            // TODO: handle exception
             System.out.println("Không thể tạo socket");
         } finally {
             if (s != null) {
