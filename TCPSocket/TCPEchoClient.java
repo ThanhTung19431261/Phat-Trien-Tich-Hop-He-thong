@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class TCPEchoClient {
     public final static String svIP = "127.0.0.1";
-    public final static int svPort = 7;
+    public final static int svPort = 12;
 
     public static void main(String[] args) throws InterruptedException, IOException {
         Socket s = null;
@@ -16,7 +16,7 @@ public class TCPEchoClient {
             System.out.println("Client đã được tạo");
             InputStream is = s.getInputStream();
             OutputStream os = s.getOutputStream();
-            for (int i = 0; i <= 9; i++) {
+            for (int i = '0'; i <= '9'; i++) {
                 os.write(i);
                 int ch = is.read();
                 System.out.println((char) ch);

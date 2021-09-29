@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPEchoServer {
-    public final static int svPort = 7;
+    public final static int svPort = 12;
 
     public static void main(String[] args) {
         try {
